@@ -44,3 +44,36 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## TypeScript
+
+- Defining Types
+
++ Interface :
+    +  interface User { 
+            name : string;
+            id : number;
+        } 
+        const user : User {
+            name : 'komal',
+            id : 10
+        }
++ Composing Types: With TypeScript, you can create complex types by combining simple ones. There are two popular ways to do so: with unions, and with generics.
+
+    + Union
+        type myBoolean = true | false
+        A popular use-case for union types is to describe the set of string or number literals that a value is allowed to be:
+        type WindowStates = "open" | "closed" | "minimized";
+        type LockStates = "locked" | "unlocked";
+
+    + Generics
+        Generics provide variables to types. A common example is an array. An array without generics could contain anything. An array with generics can describe the values that the array contains.
+        type StringArray = Array<string>;
+        type NumberArray = Array<number>;
+        type ObjectWithNameArray = Array<{ name: string }>;
+
++ Structural Type System
+
++ Difference between type and interface
+![Type vs Interface](image.png)
